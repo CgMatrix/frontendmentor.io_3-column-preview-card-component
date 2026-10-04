@@ -1,0 +1,246 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+
+## Colors
+
+### Primary
+
+Gold 500: hsl(31, 77%, 52%)
+Cyan 800: hsl(184, 100%, 22%)
+Green 950: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Gray 100 (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+.lexend-deca-<uniquifier> {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+- Family: [Big Shoulders](https://fonts.google.com/specimen/Big+Shoulders)
+- Weights: 700
+
+.big-shoulders-<uniquifier> {
+  font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*/
+:root {
+  /*CSS Functions*/
+  /*VAR()*/
+
+  /*Colors*/
+  --gray-100: hsl(0, 0%, 95%);
+  --gold-500: hsl(31, 77%, 52%);
+  --cyan-800: hsl(184, 100%, 22%);
+  --green-950: hsl(179, 100%, 13%);
+  --black: hsl(0, 0%, 0%);
+}
+
+/*MOBILE SETUP*/
+/*Default*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 0.9375rem; /*15px*/
+}
+.main-container {
+  background-color: var(--gray-100);
+  display: flex;
+}
+
+.mobile-container {
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--gray-100);
+}
+.info {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--gray-100);
+  line-height: 1.7rem;
+}
+
+/*CARD CONTAINERS*/
+.card-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  height: 27.5rem;
+
+  padding: 3rem;
+}
+.card-container-A {
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--gold-500);
+}
+
+.card-container-B {
+  background-color: var(--cyan-800);
+}
+
+.card-container-C {
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: var(--green-950);
+}
+
+/*ICONS*/
+.icon {
+  display: flex;
+  height: 2.5rem;
+  width: 4rem;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 1.5rem;
+}
+
+/*Buttons*/
+.button {
+  display: flex;
+  background-color: var(--gray-100);
+  border: 2px solid var(--gray-100);
+  margin-top: auto;
+  margin-bottom: 0;
+
+  width: 8rem;
+
+  border-radius: 1.5rem;
+  padding: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.button-A {
+  color: var(--gold-500);
+  font-family: "Lexend Deca", sans-serif;
+}
+.button-B {
+  color: var(--cyan-800);
+  font-family: "Lexend Deca", sans-serif;
+}
+.button-C {
+  color: var(--green-950);
+  font-family: "Lexend Deca", sans-serif;
+}
+.button-A:hover {
+  border: 2px solid var(--gray-100);
+  background-color: var(--gold-500);
+  color: var(--gray-100);
+  cursor: pointer;
+}
+
+.button-B:hover {
+  border: 2px solid var(--gray-100);
+  background-color: var(--cyan-800);
+  color: var(--gray-100);
+  cursor: pointer;
+}
+.button-C:hover {
+  border: 2px solid var(--gray-100);
+  background-color: var(--green-950);
+  color: var(--gray-100);
+  cursor: pointer;
+}
+footer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: var(--gray-100);
+  color: var(--black);
+  height: 2vh;
+}
+
+footer a {
+  color: var(--black);
+  text-decoration: none;
+  padding-left: 0.2rem;
+}
+
+/*DESKTOP SETUP*/
+@media (min-width: 720px) {
+  .main-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 98vh;
+  }
+  .mobile-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card-container {
+    display: flex;
+    height: 32rem;
+    width: 19rem;
+  }
+
+  .card-container-A {
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .card-container-C {
+    border-radius: 0 1rem 1rem 0;
+  }
+
+  .button {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+
+    justify-content: center;
+    align-items: center;
+  }
+}
